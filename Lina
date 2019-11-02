@@ -1,0 +1,8 @@
+As always push "Request" button and watch what sort of request is it:
+"Request is: SELECT * FROM girls WHERE name='' LIMIT 0"
+
+LIMIT 0 will not allow to display anything on the screen.
+
+The only way to baypass is to comment Limit and to create right request:
+"Request is: SELECT * FROM girls WHERE name='Lina' #' LIMIT 0"
+---------------------------------------------------------------

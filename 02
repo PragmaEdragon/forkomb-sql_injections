@@ -1,0 +1,38 @@
+Now we need to create the request ourselves:
+-------------------------------------------
+DB: MySQL
+
+Table: girls
+
+Flag: 'secret' field of Zero Two (id = '2')
+--------------------------------------------
+
+
+WAF:
+-----------------
+SELECT	disabled
+FROM	disabled
+-----------------
+
+All like in tasks before:
+select * from girls 
+
+The only problem here: WAF. 
+Its blocking our RQ's if some words are used in them.
+
+Lets create another RQ:
+seLeCt * frOm girls
+
+Request is: seLeCt * frOm girls
+------
+Result:
+----------------------------------
+id	name	height	secret
+2	02	170	spbctf{mmya_____nyaaaa!}
+15	Ichigo	152	Eh...
+556	Kokoro	160	I have OUR secret
+----------------------------------
+
+Lets upgrade it: 
+seLeCt * frOm girls where id = 2
+----------------------------------

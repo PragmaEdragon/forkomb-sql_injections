@@ -1,0 +1,77 @@
+This task is retarded tbh. You dont need some SQL inject skills to solve it. 
+
+Open google and read about information_schema.tables in SQL.
+
+Create request:
+* from information_schema.tables
+
+Result:
+TABLE_CATALOG	TABLE_SCHEMA	TABLE_NAME	TABLE_TYPE	ENGINE	VERSION	ROW_FORMAT	TABLE_ROWS	AVG_ROW_LENGTH	DATA_LENGTH	MAX_DATA_LENGTH	INDEX_LENGTH	DATA_FREE	AUTO_INCREMENT	CREATE_TIME	UPDATE_TIME	CHECK_TIME	TABLE_COLLATION	CHECKSUM	CREATE_OPTIONS	TABLE_COMMENT
+def	information_schema	CHARACTER_SETS	SYSTEM VIEW	MEMORY	10	Fixed		384	0	16434816	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=43690	
+def	information_schema	COLLATIONS	SYSTEM VIEW	MEMORY	10	Fixed		231	0	16704765	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=72628	
+def	information_schema	COLLATION_CHARACTER_SET_APPLICABILITY	SYSTEM VIEW	MEMORY	10	Fixed		195	0	16357770	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=86037	
+def	information_schema	COLUMNS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=2794	
+def	information_schema	COLUMN_PRIVILEGES	SYSTEM VIEW	MEMORY	10	Fixed		2565	0	16757145	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=6540	
+def	information_schema	ENGINES	SYSTEM VIEW	MEMORY	10	Fixed		490	0	16574250	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=34239	
+def	information_schema	EVENTS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=619	
+def	information_schema	FILES	SYSTEM VIEW	MEMORY	10	Fixed		2659	0	16743723	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=6309	
+def	information_schema	GLOBAL_STATUS	SYSTEM VIEW	MEMORY	10	Fixed		3268	0	16755036	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=5133	
+def	information_schema	GLOBAL_VARIABLES	SYSTEM VIEW	MEMORY	10	Fixed		3268	0	16755036	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=5133	
+def	information_schema	KEY_COLUMN_USAGE	SYSTEM VIEW	MEMORY	10	Fixed		4637	0	16762755	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=3618	
+def	information_schema	OPTIMIZER_TRACE	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=578524	
+def	information_schema	PARAMETERS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=6021	
+def	information_schema	PARTITIONS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=5596	
+def	information_schema	PLUGINS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=11328	
+def	information_schema	PROCESSLIST	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=23899	
+def	information_schema	PROFILING	SYSTEM VIEW	MEMORY	10	Fixed		308	0	16562084	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=54471	
+def	information_schema	REFERENTIAL_CONSTRAINTS	SYSTEM VIEW	MEMORY	10	Fixed		4814	0	16767162	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=3485	
+def	information_schema	ROUTINES	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=583	
+def	information_schema	SCHEMATA	SYSTEM VIEW	MEMORY	10	Fixed		3464	0	16738048	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=4843	
+def	information_schema	SCHEMA_PRIVILEGES	SYSTEM VIEW	MEMORY	10	Fixed		2179	0	16736899	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=7699	
+def	information_schema	SESSION_STATUS	SYSTEM VIEW	MEMORY	10	Fixed		3268	0	16755036	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=5133	
+def	information_schema	SESSION_VARIABLES	SYSTEM VIEW	MEMORY	10	Fixed		3268	0	16755036	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=5133	
+def	information_schema	STATISTICS	SYSTEM VIEW	MEMORY	10	Fixed		5753	0	16752736	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=2916	
+def	information_schema	TABLES	SYSTEM VIEW	MEMORY	10	Fixed		9441	0	16757775	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=1777	
+def	information_schema	TABLESPACES	SYSTEM VIEW	MEMORY	10	Fixed		6951	0	16772763	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=2413	
+def	information_schema	TABLE_CONSTRAINTS	SYSTEM VIEW	MEMORY	10	Fixed		2504	0	16721712	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=6700	
+def	information_schema	TABLE_PRIVILEGES	SYSTEM VIEW	MEMORY	10	Fixed		2372	0	16748692	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=7073	
+def	information_schema	TRIGGERS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=569	
+def	information_schema	USER_PRIVILEGES	SYSTEM VIEW	MEMORY	10	Fixed		1986	0	16726092	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=8447	
+def	information_schema	VIEWS	SYSTEM VIEW	MyISAM	10	Dynamic		0	0	281474976710655	1024	0		2019-11-02 16:12:02	2019-11-02 16:12:02		utf8_general_ci		max_rows=6935	
+def	information_schema	INNODB_LOCKS	SYSTEM VIEW	MEMORY	10	Fixed		31244	0	16746784	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=536	
+def	information_schema	INNODB_TRX	SYSTEM VIEW	MEMORY	10	Fixed		4536	0	16746912	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=3698	
+def	information_schema	INNODB_SYS_DATAFILES	SYSTEM VIEW	MEMORY	10	Fixed		12007	0	16773779	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=1397	
+def	information_schema	INNODB_LOCK_WAITS	SYSTEM VIEW	MEMORY	10	Fixed		599	0	16749238	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=28008	
+def	information_schema	INNODB_SYS_TABLESTATS	SYSTEM VIEW	MEMORY	10	Fixed		1215	0	16763355	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=13808	
+def	information_schema	INNODB_CMP	SYSTEM VIEW	MEMORY	10	Fixed		25	0	13107200	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=671088	
+def	information_schema	INNODB_METRICS	SYSTEM VIEW	MEMORY	10	Fixed		2994	0	16742448	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=5603	
+def	information_schema	INNODB_CMP_RESET	SYSTEM VIEW	MEMORY	10	Fixed		25	0	13107200	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=671088	
+def	information_schema	INNODB_CMP_PER_INDEX	SYSTEM VIEW	MEMORY	10	Fixed		1755	0	16728660	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=9559	
+def	information_schema	INNODB_CMPMEM_RESET	SYSTEM VIEW	MEMORY	10	Fixed		29	0	15204352	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=578524	
+def	information_schema	INNODB_FT_DELETED	SYSTEM VIEW	MEMORY	10	Fixed		9	0	9437184	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=1864135	
+def	information_schema	INNODB_BUFFER_PAGE_LRU	SYSTEM VIEW	MEMORY	10	Fixed		6669	0	16765866	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=2515	
+def	information_schema	INNODB_SYS_FOREIGN	SYSTEM VIEW	MEMORY	10	Fixed		1752	0	16700064	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=9576	
+def	information_schema	INNODB_SYS_COLUMNS	SYSTEM VIEW	MEMORY	10	Fixed		610	0	16613350	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=27503	
+def	information_schema	INNODB_SYS_INDEXES	SYSTEM VIEW	MEMORY	10	Fixed		614	0	16722290	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=27324	
+def	information_schema	INNODB_FT_DEFAULT_STOPWORD	SYSTEM VIEW	MEMORY	10	Fixed		56	0	14680064	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=299593	
+def	information_schema	INNODB_SYS_FIELDS	SYSTEM VIEW	MEMORY	10	Fixed		594	0	16609428	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=28244	
+def	information_schema	INNODB_CMP_PER_INDEX_RESET	SYSTEM VIEW	MEMORY	10	Fixed		1755	0	16728660	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=9559	
+def	information_schema	INNODB_BUFFER_PAGE	SYSTEM VIEW	MEMORY	10	Fixed		6852	0	16766844	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=2448	
+def	information_schema	INNODB_CMPMEM	SYSTEM VIEW	MEMORY	10	Fixed		29	0	15204352	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=578524	
+def	information_schema	INNODB_FT_INDEX_TABLE	SYSTEM VIEW	MEMORY	10	Fixed		1054	0	16744898	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=15917	
+def	information_schema	INNODB_FT_BEING_DELETED	SYSTEM VIEW	MEMORY	10	Fixed		9	0	9437184	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=1864135	
+def	information_schema	INNODB_SYS_TABLESPACES	SYSTEM VIEW	MEMORY	10	Fixed		2082	0	16728870	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=8058	
+def	information_schema	INNODB_FT_INDEX_CACHE	SYSTEM VIEW	MEMORY	10	Fixed		1054	0	16744898	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=15917	
+def	information_schema	INNODB_SYS_FOREIGN_COLS	SYSTEM VIEW	MEMORY	10	Fixed		1748	0	16738848	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=9597	
+def	information_schema	INNODB_SYS_TABLES	SYSTEM VIEW	MEMORY	10	Fixed		2060	0	16743680	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=8144	
+def	information_schema	INNODB_BUFFER_POOL_STATS	SYSTEM VIEW	MEMORY	10	Fixed		257	0	16332350	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=65280	
+def	information_schema	INNODB_FT_CONFIG	SYSTEM VIEW	MEMORY	10	Fixed		1163	0	16705332	0	0		2019-11-02 16:12:02			utf8_general_ci		max_rows=14425	
+def	gondex	table_b87b13ee3f01597899d340cce7bdcc53	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0		2019-10-20 11:37:25			latin1_swedish_ci			
+
+use regex or try to find table with same name as name of the task. 
+def	gondex	table_b87b13ee3f01597899d340cce7bdcc53	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0		2019-10-20 11:37:25			latin1_swedish_ci			
+
+Now we'v got table name.
+Lets create simple request:
+Select * from table_b87b13ee3f01597899d340cce7bdcc53
+----------------------------------------------------

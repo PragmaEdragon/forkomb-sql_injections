@@ -1,0 +1,16 @@
+1. Push button "request" to see what request are we doing to server. 
+2. See this: Request is: SELECT * FROM girls WHERE name=''
+
+Now read task. 
+"DB: MySQL
+
+Flag: 'secret' field of Kurome (name = 'Kurome')"
+
+input Kurome. 
+
+Now send request. 
+It will be processed on a backend and you will allow to see flag and your request. 
+
+Something like this:
+"Request is: SELECT * FROM girls WHERE name='Kurome'"
+-----------------------------------------------------
